@@ -9,9 +9,10 @@ pipeline {
         }
         stage('Deliver') {
             steps {
-                bat 'C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\reactapp\\jenkins\\scripts\\deliver.sh'
-                input message: 'Finished using the web site? (Click "Proceed" to continue)'
-                bat 'C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\reactapp\\jenkins\\scripts\\kill.sh'
+                bat 'npm start'
+                // bat 'C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\reactapp\\jenkins\\scripts\\deliver.sh'
+                // input message: 'Finished using the web site? (Click "Proceed" to continue)'
+                // bat 'C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\reactapp\\jenkins\\scripts\\kill.sh'
             }
         }
     }
